@@ -22,7 +22,8 @@ Welcome. This is a tutorial to help you learn the fundamentals of Ruby on Rails.
 
 # Sections
 
-It is recommended to follow these sections in order. You may skip sections if you wish, but each section will include Action Items that you will need to complete. These will be denoted by the prefix :warning:.
+It is recommended to follow these sections in order. You may skip sections if you wish, but each section will include Action Items that you will need to complete. These will be denoted at the end of each section in an "Action Items" header.
 
 1. [Introduction: Ruby, Bundler, RubyGems, and rbenv](./sections/0_introduction.md)
 1. [Starting with Rails](./sections/1_starting_with_rails.md)
+1. [Navigating your Rails App](./sections/2_navigating_your_rails_app.md)

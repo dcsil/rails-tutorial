@@ -30,7 +30,7 @@ Ruby version managers are tools that help you manage and install your Ruby versi
 
 # Action Items
 
-1. [Install Rbenv](https://github.com/rbenv/rbenv#installation)
-2. Install Ruby 3.0.2: Assuming you have Rbenv installed, run `rbenv install 3.0.2`.
-3. Install Bundler: Assuming you have Ruby 3.0.2 installed, run `gem install bundler`.
-4. Done!
+1. :warning: [Install Rbenv](https://github.com/rbenv/rbenv#installation)
+2. :warning: Install Ruby 3.0.2: Assuming you have Rbenv installed, run `rbenv install 3.0.2`.
+3. :warning: Install Bundler: Assuming you have Ruby 3.0.2 installed, run `gem install bundler`.
+4. :warning: Done!

@@ -4,6 +4,7 @@ Welcome. This is a tutorial to help you learn the fundamentals of Ruby on Rails.
 
 ## What will this teach me about Rails?
 
+- Ruby, Bundler, and Ruby version managers
 - [Models](https://guides.rubyonrails.org/active_record_basics.html)
 - [Views](https://guides.rubyonrails.org/action_view_overview.html)
 - [Controllers](https://guides.rubyonrails.org/action_controller_overview.html)
@@ -21,4 +22,4 @@ Welcome. This is a tutorial to help you learn the fundamentals of Ruby on Rails.
 
 # Sections
 
-TODO
+1. [Introduction: Ruby, Bundler, RubyGems, and rbenv](./sections/0_introduction.md)

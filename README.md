@@ -27,3 +27,4 @@ It is recommended to follow these sections in order. You may skip sections if yo
 1. [Introduction: Ruby, Bundler, RubyGems, and rbenv](./sections/0_introduction.md)
 1. [Starting with Rails](./sections/1_starting_with_rails.md)
 1. [Navigating your Rails App](./sections/2_navigating_your_rails_app.md)
+1. [Project Introduction](./sections/3_project_introduction.md)

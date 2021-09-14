@@ -1,4 +1,4 @@
-# Rails Tutorial
+# <img src="./rails-logo.png" height="40" width="40"> Rails Tutorial
 
 Welcome. This is a tutorial to help you learn the fundamentals of Ruby on Rails. You are about to start on a journey to create a Rails-based webapp similar to Slack, Discord, and other chat applications. There are various sections and it is recommended that you work in groups of 2.
 

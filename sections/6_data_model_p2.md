@@ -73,6 +73,19 @@ These add a couple of associations:
 - `has_many :channels, through: :memberships`: This says "we have many channels through memberships". This will find all the channels that we are a member of by looking through the memberships table.
 - `has_many :created_channels, class_name: "Channel", foreign_key: :user_id`: This says "we have many channels that we created". This will find all the channels that we created by looking at the table associated with the "Channel" model, and use the `user_id` column to find the channels that we created.
 
+## Channel Changes
+
+Add the following to the Channel model:
+
+```ruby
+has_many :memberships
+has_many :members, through: :memberships, source: :user
+```
+
+These add a couple of associations:
+
+- `has_many :memberships`: This says "we have many memberships". Rails knows to use the `course_id` column by convention to figure out which memberships are ours
+- `has_many :members, through: :memberships, source: :user`: This says "we have many members through memberships". We want to call them members and not users, so we can add the `source: :user` to tell it to use the user_id/User model
 # Action Items
 
 1. Run `bin/rails g scaffold Channel name:string description:text user:references`
@@ -80,15 +93,20 @@ These add a couple of associations:
 1. Run `bin/rails db:migrate`
 1. Change the belongs_to in `app/models/channel.rb` to `belongs_to :creator, class_name: "User", foreign_key: :user_id`
 1. Add the following to the User model:
-  ```ruby
-  has_many :memberships
-  has_many :channels, through: :memberships
-  has_many :created_channels, class_name: "Channel", foreign_key: :user_id
-  ```
+    ```ruby
+    has_many :memberships
+    has_many :channels, through: :memberships
+    has_many :created_channels, class_name: "Channel", foreign_key: :user_id
+    ```
+1. Add the following to the Channel model:
+    ```ruby
+    has_many :memberships
+    has_many :members, through: :memberships, source: :user
+    ```
 1. Run `bin/rails s`
 1. Go to http://localhost:3000/channels and create a channel
 1. Done!
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/949c9161a939108f7ca935ed591fa9ef91331b9b
+https://github.com/dcsil/rails-tutorial-example/commit/1f9621cf79c5e06b3ce217f22b37889f3e6d0fd6

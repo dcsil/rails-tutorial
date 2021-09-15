@@ -65,4 +65,4 @@ When you reload, you should have something like this:
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/5930cdbe040d4599eaece88aac8d47ceabedc170
+https://github.com/dcsil/rails-tutorial-example/commit/67cc3ec561e83b23e3df4b4cad448819392af83d

@@ -21,7 +21,7 @@ Let's install primer with `npm install @primer/css --save`.
 Create the following file: `app/javascript/packs/application.scss`. Inside add the following line:
 
 ```js
-@import '@primer/css/core/index.scss';
+@import "@primer/css/index.scss";
 ```
 
 Next, open `app/javascript/packs/application.js` and add the following line:
@@ -172,4 +172,4 @@ We have now enabled Primer and can start using it!
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/8ddf5f3ebb006be26050c76188cc2b53e5c80900
+https://github.com/dcsil/rails-tutorial-example/commit/68cd4dfff7d7f9a193ebc743faa61ac26c850cdf

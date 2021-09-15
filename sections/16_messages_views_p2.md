@@ -284,65 +284,65 @@ Now submit a message and let it load!
 1. Open `config/routes.rb` change `resources :messages` to `resources :messages, only: [:create, :update, :destroy]`.
 1. Delete views we dont need with `rm app/views/messages/*.html.erb`
 1. In the `messages_controller.rb` file, remove the `respond_to` blocks - keeping the json responses only. Here's an example:
-  ```ruby
-  def update
-    respond_to do |format|
-      if @message.update(message_params)
-        format.html { redirect_to @channel }
-        format.json { render :show, status: :ok, location: @message }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+    ```ruby
+    def update
+      respond_to do |format|
+        if @message.update(message_params)
+          format.html { redirect_to @channel }
+          format.json { render :show, status: :ok, location: @message }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @message.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
-  
-  # Can become
+    
+    # Can become
 
-  def update
-    if @message.update(message_params)
-      render :show, status: :ok, location: [@channel, @message], formats: :json
-    else
-      render json: @message.errors.full_messages.to_sentence, status: :unprocessable_entity
+    def update
+      if @message.update(message_params)
+        render :show, status: :ok, location: [@channel, @message], formats: :json
+      else
+        render json: @message.errors.full_messages.to_sentence, status: :unprocessable_entity
+      end
     end
-  end
-  ```
+    ```
 1. In `messages_controller.rb`, change `@message.errors` to `@message.errors.full_messages.to_sentence`
 1. Add `before_action :set_channel` to `messages_controller.rb`
 1. Add the `set_channel` method to `messages_controller.rb`
-  ```ruby
-  def set_channel
-    @channel = Channel.find(params[:channel_id])
-  end
-  ```
+    ```ruby
+    def set_channel
+      @channel = Channel.find(params[:channel_id])
+    end
+    ```
 1. Update create to use `@channel.messages` instead of `Message`:
-  ```ruby
-  def create
-    @message = @channel.messages.build(message_params)
-    ...
-  end
-  ```
+    ```ruby
+    def create
+      @message = @channel.messages.build(message_params)
+      ...
+    end
+    ```
 1. Update index to use `@channel.messages` instead of `Message.all`:
-  ```ruby
-  def index
-    @messages = @channel.messages
-  end
-  ```
+    ```ruby
+    def index
+      @messages = @channel.messages
+    end
+    ```
 1. Update `message_params` to:
-  ```ruby
-  def message_params
-    params.require(:message).permit(:content)
-  end
-  ```
+    ```ruby
+    def message_params
+      params.require(:message).permit(:content)
+    end
+    ```
 1. Explicitly set recipient and sender to `@channel` and `current_user` in create:
-  ```ruby
-  def create
-    @message = @channel.messages.build(message_params)
-    @message.sender = current_user
-    @message.recipient = @channel
-    ...
-  end
-  ```
+    ```ruby
+    def create
+      @message = @channel.messages.build(message_params)
+      @message.sender = current_user
+      @message.recipient = @channel
+      ...
+    end
+    ```
 1. Change `app/views/channels/show.html.erb` to:
     ```erb
     <div class="d-flex flex-column flex-justify-end height-full">
@@ -375,37 +375,37 @@ Now submit a message and let it load!
     json.url channel_message_url(message.recipient, message, format: :json)
     ```
 1. In `app/views/layouts/application.html.erb` change the `nav` to:
-  ```erb
-  <nav class="col-2 pt-5 m-0 color-bg-canvas-inverse color-text-inverse menu border-0 rounded-0" aria-label="Channels">
-  ```
+    ```erb
+    <nav class="col-2 pt-5 m-0 color-bg-canvas-inverse color-text-inverse menu border-0 rounded-0" aria-label="Channels">
+    ```
 1. And remove the padding on the `col-10`:
-  ```erb
-  <div class="col-10">
-    <%= yield %>
-  </div>
-  ```
+    ```erb
+    <div class="col-10">
+      <%= yield %>
+    </div>
+    ```
 1. In `app/views/channels/shoiw.html.erb` replace `MESSAGE BOX` with:
-  ```erb
-  <%= form_with model: [@channel, @channel.messages.build], local: false do |form| %>
-    <%= form.rich_text_area :content, class: "color-bg-canvas color-text-primary p-1" %>
-    <%= form.submit "Send Message", class: "btn btn-sm mt-2" %>
-  <% end %>
-  ```
+    ```erb
+    <%= form_with model: [@channel, @channel.messages.build], local: false do |form| %>
+      <%= form.rich_text_area :content, class: "color-bg-canvas color-text-primary p-1" %>
+      <%= form.submit "Send Message", class: "btn btn-sm mt-2" %>
+    <% end %>
+    ```
 1. Open `app/javascript/packs/application.js` and add the following:
 
-  ```js
-  document.addEventListener("turbolinks:load", () => {
-    const forms = document.querySelectorAll('form[data-remote="true"]');
-    forms.forEach(form => {
-      form.addEventListener("ajax:success", (event) => {
-        window.location.reload();
-      });
-      form.addEventListener("ajax:error", (event) => {
-        alert(event.detail[0]);
+    ```js
+    document.addEventListener("turbolinks:load", () => {
+      const forms = document.querySelectorAll('form[data-remote="true"]');
+      forms.forEach(form => {
+        form.addEventListener("ajax:success", (event) => {
+          window.location.reload();
+        });
+        form.addEventListener("ajax:error", (event) => {
+          alert(event.detail[0]);
+        });
       });
     });
-  });
-  ```
+    ```
 1. Add `gem 'image_processing', '~> 1.2'` to your Gemfile and run `bundle install`.
 
 # Commit in the Example app

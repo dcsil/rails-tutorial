@@ -94,9 +94,15 @@ All of these are basically the same, changing out the variable and heading.
 
 # Action Items
 
-1. Update Channels Index
-2. Update Users Index
-3. Update Edit/New for Channels/Users
+1. Add a `member?` method to `channel.rb`
+    ```ruby
+      def member?(user)
+        memberships.exists?(user_id: user.id)
+      end
+    ```
+1. Update Channels Index (See above)
+2. Update Users Index (See above)
+3. Update Edit/New for Channels/Users (See above)
 
 # Commit in the Example app
 

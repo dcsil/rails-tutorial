@@ -49,7 +49,16 @@ Back in the server tab, try to log in. This should let you through to the users 
 1. Install the Devise gem by adding `gem "devise"` to the Gemfile.
 2. Run `bundle install` to install the gem.
 3. Run `bin/rails generate devise:install` to install Devise to the App.
-4. Run `bin/rails generate devise User` to install Devise to the User model.
+4. Run `bin/rails generate devise User` to install Devise to the User model. **Note: We already had an email column, so remove that from the generated migration.** Comment out the line that starts with `t.string :email`
+5. Run `bin/rails g migration AddConstraintsToEmail` and add:
+   ```ruby
+    class AddConstraintsToEmail < ActiveRecord::Migration[6.1]
+      def change
+        change_column_null :users, :email, false
+        change_column_default :users, :email, ''
+      end
+    end
+   ```
 5. Run `bin/rails db:migrate` to add the new columns.
 6. Add `before_action :authenticate_user!` to the top of the ApplicationController.
 7. Open console and run the following:
@@ -62,3 +71,7 @@ Back in the server tab, try to log in. This should let you through to the users 
 8. Run the server with `bin/rails s`.
 9. Navigate to http://localhost:3000/users.
 10. Try to log in. This should let you through to the users table once you use the correct email and password.
+
+# Commit in the Example app
+
+https://github.com/dcsil/rails-tutorial-example/commit/96839eb0e205401a750cb856fdccf5e856dac1ff

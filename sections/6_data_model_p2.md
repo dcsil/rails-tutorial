@@ -46,7 +46,7 @@ The `belongs_to` method is a special method that will add an association to the 
 First, we want to have the user be called `creator`. To do this we can modify the `belongs_to` call to:
 `belongs_to :creator, class_name: "User", foreign_key: :user_id`.
 
-Now if you run `bin/rails db:migrate` and `bin/rails s`, you should be able to go to http://localhost:3000/channels and create a channel. The UX here isn't optimal yet (e.g. you have to select a user from a dropdown when it should auto use the current user), but it's a start. We'll optimize it later.
+Now if you run `bin/rails db:migrate` and `bin/rails s`, you should be able to go to http://localhost:3000/channels and create a channel. The UX here isn't optimal yet (e.g. you have to select a user by inputting a user ID when it should auto use the current user), but it's a start. We'll optimize it later.
 
 ## Memberships
 
@@ -78,7 +78,7 @@ These add a couple of associations:
 1. Run `bin/rails g scaffold Channel name:string description:text user:references`
 1. Run `bin/rails g model Membership user:references channel:references`
 1. Run `bin/rails db:migrate`
-1. Change the belongs_to in Channel to `belongs_to :creator, class_name: "User", foreign_key: :user_id`
+1. Change the belongs_to in `app/models/channel.rb` to `belongs_to :creator, class_name: "User", foreign_key: :user_id`
 1. Add the following to the User model:
   ```ruby
   has_many :memberships
@@ -88,3 +88,7 @@ These add a couple of associations:
 1. Run `bin/rails s`
 1. Go to http://localhost:3000/channels and create a channel
 1. Done!
+
+# Commit in the Example app
+
+https://github.com/dcsil/rails-tutorial-example/commit/949c9161a939108f7ca935ed591fa9ef91331b9b

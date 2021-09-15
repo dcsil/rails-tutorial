@@ -32,3 +32,5 @@ It is recommended to follow these sections in order. You may skip sections if yo
 1. [User Authentication](./sections/5_user_authentication.md)
 1. [Data Model (Part 2)](./sections/6_data_model_p2.md)
 1. [Add Primer](./sections/7_add_primer.md)
+1. [Application Layouts (Part 1)](./sections/8_layouts_p1.md)
+1. [Application Layouts (Part 2) and Memberships](./sections/9_layouts_p2.md)

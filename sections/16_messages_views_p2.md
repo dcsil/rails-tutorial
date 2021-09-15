@@ -410,4 +410,4 @@ Now submit a message and let it load!
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/489b4ab9c4d5ae822cb297486b47567c73e0bc24
+https://github.com/dcsil/rails-tutorial-example/commit/84f9dabf1c2f578018da2801cf33486e4a3a3bfd

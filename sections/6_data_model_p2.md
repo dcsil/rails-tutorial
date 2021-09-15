@@ -84,7 +84,7 @@ has_many :members, through: :memberships, source: :user
 
 These add a couple of associations:
 
-- `has_many :memberships`: This says "we have many memberships". Rails knows to use the `course_id` column by convention to figure out which memberships are ours
+- `has_many :memberships`: This says "we have many memberships". Rails knows to use the `channel_id` column by convention to figure out which memberships are ours
 - `has_many :members, through: :memberships, source: :user`: This says "we have many members through memberships". We want to call them members and not users, so we can add the `source: :user` to tell it to use the user_id/User model
 # Action Items
 

@@ -1,0 +1,91 @@
+# Improve Views
+
+We are at the point where we have basic data models and decent views for the most part. Before we continue, let's make sure our existing views are all decent.
+
+Channels Index, Users Index, and the New/Edit page of both are all outdated.
+
+We can use Primer to update these. This can be a more creative endeavour, so I'll list what I have here but it's not the only way to do it.
+
+## Channels Index
+
+```erb
+<p id="notice"><%= notice %></p>
+
+<div class="d-flex flex-justify-between flex-items-center">
+  <h1>Channel List</h1>
+  <div><%= link_to 'New Channel', new_channel_path, class: "btn btn-sm btn-primary" %></div>
+</div>
+
+<div class="Box">
+  <ul>
+    <% @channels.each do |channel| %>
+      <li class="Box-row d-flex flex-justify-between">
+        <div>
+          <h2><%= channel.name %></h2>
+          <p><%= channel.description %></p>
+          <%= link_to "Created by #{channel.creator.name}", user_path(channel.creator), class: "Link--muted" %>
+        </div>
+        <div class="d-flex flex-column">
+          <%= link_to channel.member?(current_user) ? 'Show Channel' : 'Join Channel', channel, class: "btn btn-primary" %>
+          <% if channel.creator == current_user %>
+            <div><%= link_to 'Edit', edit_channel_path(channel), class: "btn mt-1" %></div>
+            <div><%= link_to 'Destroy', channel, method: :delete, data: { confirm: "Are you sure you want to destroy #{channel.name}?" }, class: "btn mt-1 btn-danger" %></div>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+```
+
+## Users Index
+
+```erb
+<p id="notice"><%= notice %></p>
+
+<div class="d-flex flex-justify-between flex-items-center">
+  <h1>Users</h1>
+  <div><%= link_to 'New user', new_user_path, class: "btn btn-sm btn-primary" %></div>
+</div>
+
+<div class="Box">
+  <ul>
+    <% @users.each do |user| %>
+      <li class="Box-row d-flex flex-justify-between">
+        <div>
+          <h2><%= user.name %><% if user.preferred_pronouns.present? %> <small><%= user.preferred_pronouns %></small><% end %></h2>
+          <p><%= user.bio %></p>
+        </div>
+        <div class="d-flex flex-column">
+          <%= link_to 'See profile', user, class: "btn btn-primary" %>
+          <% if user == current_user %>
+            <div><%= link_to 'Edit', edit_user_path(user), class: "btn mt-1" %></div>
+            <div><%= link_to 'Destroy', user, method: :delete, data: { confirm: "Are you sure you want to delete your account?" }, class: "btn mt-1 btn-danger" %></div>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+```
+
+## Edit/New
+
+```erb
+<div class="container">
+  <h1>Editing Channel</h1>
+  <%= render 'form', channel: @channel %>
+</div>
+```
+
+All of these are basically the same, changing out the variable and heading.
+
+# Action Items
+
+1. Update Channels Index
+2. Update Users Index
+3. Update Edit/New for Channels/Users
+
+# Commit in the Example app
+
+https://github.com/dcsil/rails-tutorial-example/commit/064a76bd6965d45780ac4746df48640da6f2ac1c

@@ -117,4 +117,4 @@ Now when you view a channel you will be automatically added to the channel's mem
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/bcd54eab9a370ec91de70e29f74d16f2f5063625
+https://github.com/dcsil/rails-tutorial-example/commit/465a698563c82a6001fd9f3bc09717d46ced242b

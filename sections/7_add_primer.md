@@ -172,4 +172,4 @@ We have now enabled Primer and can start using it!
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/68cd4dfff7d7f9a193ebc743faa61ac26c850cdf
+https://github.com/dcsil/rails-tutorial-example/commit/4487da46996fe22d7750b52ffa396937418bc9b8

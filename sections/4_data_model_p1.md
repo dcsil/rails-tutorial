@@ -23,7 +23,7 @@ Columns/Attributes like name, email, bio, etc. are all attributes that we want t
 
 This attribute is a little more intriguing. We need to store the password in a secure way. There are a number of ways to do this securely such as using bcrypt, Rails' built in encryption, usin a gem like Devise to handle user auth, and others.
 
-While we won't go in depth on these in this section, here is an overview of some of the options. We will look at these more in depth later on in the course.
+While we won't go in depth on these in this section, here is an overview of some of the options. We will look at these more in depth later on in the tutorial.
 
 #### Rails' built in encryption
 

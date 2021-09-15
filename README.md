@@ -34,3 +34,5 @@ It is recommended to follow these sections in order. You may skip sections if yo
 1. [Add Primer](./sections/7_add_primer.md)
 1. [Application Layouts (Part 1)](./sections/8_layouts_p1.md)
 1. [Application Layouts (Part 2) and Memberships](./sections/9_layouts_p2.md)
+1. [Forms and Validations](./sections/10_forms_and_validations.md)
+1. [Improve Existing Views](./sections/11_improve_views.md)

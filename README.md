@@ -31,3 +31,4 @@ It is recommended to follow these sections in order. You may skip sections if yo
 1. [Data Model (Part 1)](./sections/4_data_model_p1.md)
 1. [User Authentication](./sections/5_user_authentication.md)
 1. [Data Model (Part 2)](./sections/6_data_model_p2.md)
+1. [Add Primer](./sections/7_add_primer.md)

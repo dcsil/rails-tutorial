@@ -157,8 +157,8 @@ _________________________________________________________
 We have that sidebar right now, but we need to change the chat show page to have a chat box at the bottom. We can leverage Primer and Flexbox to get this layout. In show.html.erb, add the following:
 
 ```erb
-<div class="d-flex flex-column flex-justify-end height-full">
-  <div class="color-bg-canvas-inverse color-text-inverse p-2 d-flex flex-justify-between flex-items-center">
+<div class="d-flex flex-column height-full">
+  <div class="flex-shrink-0 color-bg-canvas-inverse color-text-inverse p-2 d-flex flex-justify-between flex-items-center">
     <div>
       <h1><%= @channel.name %></h1>
       <p><%= @channel.description %></p>
@@ -170,13 +170,13 @@ We have that sidebar right now, but we need to change the chat show page to have
       <%= link_to "Leave Channel", channel_membership_path(@channel, @active_membership), class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure you want to leave #{@channel.name}?" } %>
     </div>
   </div>
-  <div class="flex-1 p-3">
+  <div style="overflow: scroll;" class="flex-auto p-3">
     <p id="notice"><%= notice %></p>
     <% @channel.messages.each do |message| %>
       <p><%= message.content %>
     <% end %>
   </div>
-  <div style="height: 175px" class="flex-justify-end color-bg-canvas-inverse color-text-inverse p-3">
+  <div style="height: 175px" class="color-bg-canvas-inverse color-text-inverse p-3">
    MESSAGE BOX
   </div>
 </div>
@@ -345,8 +345,8 @@ Now submit a message and let it load!
     ```
 1. Change `app/views/channels/show.html.erb` to:
     ```erb
-    <div class="d-flex flex-column flex-justify-end height-full">
-      <div class="color-bg-canvas-inverse color-text-inverse p-2 d-flex flex-justify-between flex-items-center">
+    <div class="d-flex flex-column height-full">
+      <div class="flex-shrink-0 color-bg-canvas-inverse color-text-inverse p-2 d-flex flex-justify-between flex-items-center">
         <div>
           <h1><%= @channel.name %></h1>
           <p><%= @channel.description %></p>
@@ -358,13 +358,13 @@ Now submit a message and let it load!
           <%= link_to "Leave Channel", channel_membership_path(@channel, @active_membership), class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure you want to leave #{@channel.name}?" } %>
         </div>
       </div>
-      <div class="flex-1 p-3">
+      <div style="overflow: scroll;" class="flex-auto p-3">
         <p id="notice"><%= notice %></p>
         <% @channel.messages.each do |message| %>
           <p><%= message.content %>
         <% end %>
       </div>
-      <div style="height: 175px" class="flex-justify-end color-bg-canvas-inverse color-text-inverse p-3">
+      <div style="height: 175px" class="color-bg-canvas-inverse color-text-inverse p-3">
       MESSAGE BOX
       </div>
     </div>
@@ -410,4 +410,4 @@ Now submit a message and let it load!
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/37b65da1d917c540550d56a59d7efe1cead023a3
+https://github.com/dcsil/rails-tutorial-example/commit/c8c2b2ccf35860c8b3756b2cae0c081ec52ed856

@@ -44,3 +44,4 @@ It is recommended to follow these sections in order. You may skip sections if yo
 1. [Implement leaving a Channel: Soft Deletion (Part 1)](./sections/12_implement_leaving_a_channel_soft_deletion.md)
 1. [Implement leaving a Channel: Controllers and Routing (Part 2)](./sections/13_implement_leaving_a_channel_controllers_and_routing_p2.md)
 1. [Nested Routes](./sections/14_nested_routes.md)
+1. [Action Text and Messages (Part 1)](./sections/15_action_text_and_messages_p1.md)

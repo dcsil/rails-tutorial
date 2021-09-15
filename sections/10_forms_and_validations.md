@@ -199,4 +199,4 @@ As an exercise, convert both the `Channel` and `User` forms to use the same appr
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/8231d300fe84b1c971480931fbb18a069449d489
+https://github.com/dcsil/rails-tutorial-example/commit/77dc2f4783b1b38c7791d227978e0a7ecc0ab1c8

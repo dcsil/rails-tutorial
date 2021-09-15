@@ -8,6 +8,18 @@ We can use Primer to update these. This can be a more creative endeavour, so I'l
 
 ## Channels Index
 
+First, we will add a helper method to `channel.rb`. Add the following method:
+
+```ruby
+  def member?(user)
+    memberships.exists?(user_id: user.id)
+  end
+```
+
+This will let us easily check is a user is in a channel without worrying about SQL calls.
+
+Next, we'll change the views.
+
 ```erb
 <p id="notice"><%= notice %></p>
 
@@ -88,4 +100,4 @@ All of these are basically the same, changing out the variable and heading.
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/064a76bd6965d45780ac4746df48640da6f2ac1c
+https://github.com/dcsil/rails-tutorial-example/commit/380b9ce7e4a1e06f0be2e2d2d7229adb8eda2ea4

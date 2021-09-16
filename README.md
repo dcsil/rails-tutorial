@@ -14,9 +14,8 @@ Welcome. This is a tutorial to help you learn the fundamentals of Ruby on Rails.
 - [Mailers](https://guides.rubyonrails.org/action_mailer_basics.html)
 - [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html)
 - [User Authentication with Devise](https://github.com/heartcombo/devise)
-- [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html)
 - [ActiveStorage](https://guides.rubyonrails.org/active_storage_overview.html)
-- [ActionText](https://edgeguides.rubyonrails.org/action_text_overview.html)
+- [ActiveText](https://edgeguides.rubyonrails.org/action_text_overview.html)
 - And more!
 
 ### Maybe

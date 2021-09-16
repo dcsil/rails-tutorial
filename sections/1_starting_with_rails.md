@@ -9,13 +9,13 @@ It is based on the concept of a model–view–controller (MVC) architecture, wh
 
 Ruby on Rails is distributed as a RubyGem. You can install it with the command: `gem install rails`. This will install the latest version. We do not want to use Bundler here because we would like to use an executable `rails` command to generate a new Rails application, including the Gemfile. Everything else we use will be installed by the Gemfile.
 
-We are now going to generate a new Rails application. We will use the command `rails new my_app`. This will create a new directory called `my_app` in the current directory with a default rails app inside. NOTE: we do not want to run this command by itself. Rails uses a lot of settings and we want to set the database as we generate our app. Make sure to run this command with the flag `--database=mysql`.
+We are now going to generate a new Rails application. We will use the command `rails new chat_app`. This will create a new directory called `my_app` in the current directory with a default rails app inside. NOTE: we do not want to run this command by itself. Rails uses a lot of settings and we want to set the database as we generate our app. Make sure to run this command with the flag `--database=mysql`.
 
 # Action Items
 
 1. Install Rails: `gem install rails`
 1. Generate a new Rails application:
-   `rails new chat_app --datbabase=mysql`
+   `rails new chat_app --database=mysql`
 1. Bundle install: `bundle install`. This may take some time as it has to install some gems, compile some C extensions and install JavaScript dependencies.
 1. Run `bin/rails db:create` to initialize the database.
 1. Run Rails: `bin/rails s`

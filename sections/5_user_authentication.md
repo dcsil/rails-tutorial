@@ -61,7 +61,7 @@ Back in the server tab, try to log in. This should let you through to the users 
    ```
 5. Run `bin/rails db:migrate` to add the new columns.
 6. Add `before_action :authenticate_user!` to the top of the ApplicationController.
-7. Open console and run the following:
+7. Run `bin/rails console` and run the following:
     ```ruby
     user = User.first
     user.password = '123456!'

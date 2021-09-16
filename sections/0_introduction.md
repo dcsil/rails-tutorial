@@ -30,6 +30,7 @@ Ruby version managers are tools that help you manage and install your Ruby versi
 
 # Action Items
 
+1. If you are on Mac, run `brew list ruby`. If Ruby is installed via Homebrew, run `brew uninstall ruby`. This will conflict with Rbenv.
 1. [Install Rbenv](https://github.com/rbenv/rbenv#installation)
 1. Install Ruby 3.0.2: Assuming you have Rbenv installed, run `rbenv install 3.0.2`.
 1. Run `rbenv global 3.0.2` to set the version of Ruby to use. This will set the default Ruby version to 3.0.2 and will be the default version used from now on unless overridden with a local `.ruby-version` file.

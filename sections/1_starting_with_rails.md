@@ -13,7 +13,7 @@ We are now going to generate a new Rails application. We will use the command `r
 
 # Action Items
 
-1. Install Rails: `gem install rails`
+1. Install Rails: `gem install rails`. _Do not use sudo_.
 1. Generate a new Rails application:
    `rails new chat_app --database=mysql`
 1. Bundle install: `bundle install`. This may take some time as it has to install some gems, compile some C extensions and install JavaScript dependencies.
@@ -44,3 +44,6 @@ Make sure that `gem install mysql2 -v 'VERSION' --source 'https://rubygems.org/'
 ```
 
 This is failing due to OpenSSL. You can fix this by running `gem install mysql2 --source 'https://rubygems.org/' -- --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include`, then rerunning `rails new chat_app --datbabase=mysql`. Select `Y` to override conflicts as we haven't made any changes yet.
+
+
+You may see other errors. Try `brew install mysql@5.7` and `brew link mysql@5.7` then try again.

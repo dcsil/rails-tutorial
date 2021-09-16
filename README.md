@@ -50,6 +50,7 @@ It is recommended to follow these sections in order. You may skip sections if yo
 1. [Adding Tests (Part 1)](./sections/17_adding_tests_p1.md)
 1. [Adding Tests (Part 2)](./sections/18_adding_tests_p2.md)
 1. [Adding Tests (Part 3)](./sections/19_adding_tests_p3.md)
+1. [Adding Tests (Part 4)](./sections/20_adding_tests_p4.md)
 1. TODO: Better Views
 1. TODO: Counter Caches and SQL Optimizations
 1. TODO: Profile Page

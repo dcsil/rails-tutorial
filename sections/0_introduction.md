@@ -28,6 +28,12 @@ RubyeGems is an index of packages that are available for you to use. You can see
 
 Ruby version managers are tools that help you manage and install your Ruby versions. There are a lot of them, but the most common ones are rbenv, chruby, and rvm.
 
+# Node and Nodenv
+
+Node is a JavaScript runtime. It allows us to run JS code, and work with it in our app. Nodenv was created to help manage Node versions, just like Rbenv for Ruby.
+
+We will use both for the JS in our app.
+
 # Action Items
 
 1. If you are on Mac, run `brew list ruby`. If Ruby is installed via Homebrew, run `brew uninstall ruby`. This will conflict with Rbenv.
@@ -35,4 +41,7 @@ Ruby version managers are tools that help you manage and install your Ruby versi
 1. Install Ruby 3.0.2: Assuming you have Rbenv installed, run `rbenv install 3.0.2`.
 1. Run `rbenv global 3.0.2` to set the version of Ruby to use. This will set the default Ruby version to 3.0.2 and will be the default version used from now on unless overridden with a local `.ruby-version` file.
 1. Install Bundler: Assuming you have Ruby 3.0.2 installed, run `gem install bundler`.
+1. Install [Nodenv](https://github.com/nodenv/nodenv#installation)
+1. Install a recent version of Node.js: Run `nodenv install 16.6.1`.
+1. Set it globally: Run `nodenv global 16.6.1`.
 1. Done!

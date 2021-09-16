@@ -117,9 +117,9 @@ Within the setup block in each controller test, let's add `sign_in(something_tha
 
 Let's run the tests again and see if they work.
 
-# NoMethodErrors
+# Wall of output
 
-Right now if we run tests we will see a wall of NoMethodErrors. This is because we changed the nesting of some of the models. If we run a single controller for a model that we didn't nest, we can see it works a bit better. So let's start there:
+Right now if we run tests we will see a wall of errors, particularly ones like `NameError: undefined local variable or method 'new_message_url'`. This is because we changed the nesting of some of the models. If we run a single controller for a model that we didn't nest, we can see it works a bit better. So let's start there:
 
 `bin/rails test test/controllers/users_controller_test.rb`
 
@@ -257,4 +257,4 @@ Let's take a break at this point :)
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/bb17eaea9f5beb23e74ed925c5ad7da5e6ef1155
+https://github.com/dcsil/rails-tutorial-example/commit/69c6d1eb57e2cb2c748a5cdc3fe5582bdd0bd735

@@ -86,4 +86,4 @@ That's it for now, we will work to integrate the model soon!
 
 # Commit in the Example app
 
-https://github.com/dcsil/rails-tutorial-example/commit/573ed7e104aec0766736f122d3e6ce01e97438e5
+https://github.com/dcsil/rails-tutorial-example/commit/705bf962012b0311ed6bf5e9d292d1a513e18057

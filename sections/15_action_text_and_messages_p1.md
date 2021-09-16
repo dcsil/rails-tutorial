@@ -12,23 +12,23 @@ Let's consider what a message is first:
 
 Let's take a closer look at that last question.
 
-Rails comes with a built-in text rendering engine called ActionText: https://edgeguides.rubyonrails.org/action_text_overview.html
+Rails comes with a built-in text rendering engine called ActiveText: https://edgeguides.rubyonrails.org/action_text_overview.html
 
-ActionText can be integrated seamlessly to support [Trix](https://github.com/basecamp/trix), which is a rich text editor built by Basecamp.
+ActiveText can be integrated seamlessly to support [Trix](https://github.com/basecamp/trix), which is a rich text editor built by Basecamp.
 
-While we could certainly use a different text editor or build a markdown rendering engine, we will use ActionText to familiarize ourselves with the process.
+While we could certainly use a different text editor or build a markdown rendering engine, we will use ActiveText to familiarize ourselves with the process.
 
-## ActionText
+## ActiveText
 
 Run `bin/rails action_text:install` to add the JS dependency and copy over the necessary migration. This will create a migration to build out a separate `action_text_rich_texts` table. This will allow us to store rich text in our database.
 
 Run `bin/rails db:migrate` to apply the migrations.
 
-ActionText is now installed!
+ActiveText is now installed!
 
 ## The Message Model
 
-ActionText can take care of the actual _message_ content of the message, but we will add it directly onto the message model itself.s
+ActiveText can take care of the actual _message_ content of the message, but we will add it directly onto the message model itself.s
 
 Otherwise, we need to know:
 - Who sent the mesage
@@ -44,7 +44,7 @@ bin/rails g scaffold message content:rich_text channel:references sender:referen
 ```
 
 There are a few new concepts here:
-- The content is a rich text field. This is a special type of text field that can handle rich text via Action Text, we won't use that type otherwise.
+- The content is a rich text field. This is a special type of text field that can handle rich text via ActiveText, we won't use that type otherwise.
 - The sender is a reference to a user. This will generate a `sender_id` and not a `user_id`. This means we need to do a bit more work in the models to accommodate this, but we have a more accurate data model
 - The recipient is a reference to a user or a channel. This will generate a `recipient_id` and a `recipeint_type` - not a `user_id` or `channel_id`. Rails will use the ID column to store the ID of the recipient, and the type column to store the class of the recipient. This will be almost transparent to us in the end.
 

@@ -272,7 +272,7 @@ This simple JS will reload the page on success, and otherwise show an alert if t
 
 # Submitting a message
 
-At this point you shoudl be able to submit a message! You can even add text styling and upload attachments (thanks ActionText!). The images won't load properly though unless you add a gem first, so let's do that!
+At this point you shoudl be able to submit a message! You can even add text styling and upload attachments (thanks ActiveText!). The images won't load properly though unless you add a gem first, so let's do that!
 
 Add `gem 'image_processing', '~> 1.2'` to your Gemfile and run `bundle install`.
 

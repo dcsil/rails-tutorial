@@ -1,6 +1,6 @@
 # Data Model (Part 1)
 
-Rails applications are usually backed by a database. In [Starting with Rails](./1_starting_with_rails.md) we initialized this application with MySQL. We can initialize the MySQL database with the following command: `bin/rails db:create`. This will load the configuration file `config/database.yml` and create the database.
+Rails applications are usually backed by a database. In [Starting with Rails](./1_starting_with_rails.md) we initialized this application with MySQL. In the last step we initialized the MySQL database with the following command: `bin/rails db:create`. This will load the configuration file `config/database.yml` and create the database.
 
 Now that we have our database, we can start to work with it. First, we need to design the data model that populates this application. Based on our requirements in [Project Introduction](./3_project_introduction.md), we need to 
 create a table for (at least) each of the following:

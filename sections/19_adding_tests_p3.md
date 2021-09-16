@@ -95,6 +95,6 @@ Tests should now pass for everything!
     ```
 1. All tests now pass!
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/55531e954be32c9ba2701f920bb3ae8081ddd213

@@ -408,6 +408,6 @@ Now submit a message and let it load!
     ```
 1. Add `gem 'image_processing', '~> 1.2'` to your Gemfile and run `bundle install`.
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/e68e4579c7b291e18013b907d86f18f20be1a9c0

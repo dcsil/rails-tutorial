@@ -63,6 +63,6 @@ When you reload, you should have something like this:
     ```
 1. Run `bin/rails s` and `bin/webpack-dev-server`, then reload the page.
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/67cc3ec561e83b23e3df4b4cad448819392af83d

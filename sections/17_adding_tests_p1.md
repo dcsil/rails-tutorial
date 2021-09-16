@@ -255,6 +255,6 @@ Let's take a break at this point :)
 1. Open `app/models/channel.rb` and add `optional: true` to the `belongs_to :creator` line
 1. Done! `bin/rails test test/controllers/users_controller_test.rb` should now pass.
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/69c6d1eb57e2cb2c748a5cdc3fe5582bdd0bd735

@@ -167,6 +167,6 @@ We will want to change `current_user.channels` to `current_user.active_channels`
 1. In `app/views/layouts/application.html.erb`, change `current_user.channels` to `current_user.active_channels` and `channel.members` to `channel.active_members`
 1. Done!
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/22df515bce94c856fe485c0556429e2a160948ec

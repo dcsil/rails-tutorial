@@ -86,6 +86,6 @@ All Channels Controller tests should pass now!
 1. Change the names in `test/fixtures/channels.yml` to be unique
 1. Fix the create channel test by changing the name to be unique from an existing channel
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/02e6885462341c3afd0511e851590de5245e8540

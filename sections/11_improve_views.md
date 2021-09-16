@@ -104,6 +104,6 @@ All of these are basically the same, changing out the variable and heading.
 2. Update Users Index (See above)
 3. Update Edit/New for Channels/Users (See above)
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/380b9ce7e4a1e06f0be2e2d2d7229adb8eda2ea4

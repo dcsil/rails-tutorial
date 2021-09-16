@@ -115,6 +115,6 @@ Now when you view a channel you will be automatically added to the channel's mem
     ```
 3. Go to a channel (create one if you have none) and check the sidebar, you should see that channel show up there.
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/465a698563c82a6001fd9f3bc09717d46ced242b

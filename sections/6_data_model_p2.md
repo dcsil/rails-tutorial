@@ -107,6 +107,6 @@ These add a couple of associations:
 1. Go to http://localhost:3000/channels and create a channel
 1. Done!
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/1f9621cf79c5e06b3ce217f22b37889f3e6d0fd6

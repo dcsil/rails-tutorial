@@ -113,6 +113,6 @@ You can repeat this for other endpoints as well if you want.
 3. Add tests to check that if we are not logged in, we redirect to sign in page in `test/controllers/memberships_controller_test.rb` (and the others if you want)
 4. Done!
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/2e0f15836163badafad63afa050cc6f475061bb3

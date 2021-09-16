@@ -72,6 +72,6 @@ Back in the server tab, try to log in. This should let you through to the users 
 9. Navigate to http://localhost:3000/users.
 10. Try to log in. This should let you through to the users table once you use the correct email and password.
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/96839eb0e205401a750cb856fdccf5e856dac1ff

@@ -170,6 +170,6 @@ We have now enabled Primer and can start using it!
 1. Run `bin/rails s` AND `bin/webpack-dev-server` (we run both now).
 1. Open http://localhost:3000/users and see the new Primer styles.
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/4487da46996fe22d7750b52ffa396937418bc9b8

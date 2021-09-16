@@ -129,6 +129,6 @@ Now let's try it out!
     ```
 1. Try it out!
 
-# Commit in the Example app
+# This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/a209b0183211e49b3eb5beee22271612a2355331

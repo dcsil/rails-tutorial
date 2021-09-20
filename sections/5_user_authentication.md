@@ -18,7 +18,7 @@ Second, Devise adds its own generator to the Rails application. Run `bin/rails g
 
 Third, we need to install Devise to our User model. Run `bin/rails generate devise User` to install Devise to the User model. Run `bin/rails db:migrate` to add the new columns.
 
-Finally, we need to add `before_action :authenticate_user!` to the top of the ApplicationController. This will ensure that all requests to the application will require authentication.
+Finally, we need to add `before_action :authenticate_user!` to the top of the ApplicationController class definition. This will ensure that all requests to the application will require authentication.
 
 ### Helpers
 
@@ -60,7 +60,13 @@ Back in the server tab, try to log in. This should let you through to the users 
     end
    ```
 5. Run `bin/rails db:migrate` to add the new columns.
-6. Add `before_action :authenticate_user!` to the top of the ApplicationController class, not the file itself.
+6. Add `before_action :authenticate_user!` to the top of the ApplicationController class definition:
+   ```ruby
+   class ApplicationController
+     before_action :authenticate_user!
+     ...
+   end
+   ```
 7. Run `bin/rails console` and run the following:
     ```ruby
     user = User.first

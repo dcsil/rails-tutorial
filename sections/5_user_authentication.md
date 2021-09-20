@@ -16,7 +16,17 @@ First, we need to add the gem to our Gemfile. Add `gem "devise"` to the Gemfile.
 
 Second, Devise adds its own generator to the Rails application. Run `bin/rails generate devise:install` to install Devise.
 
-Third, we need to install Devise to our User model. Run `bin/rails generate devise User` to install Devise to the User model. Run `bin/rails db:migrate` to add the new columns.
+Third, we need to install Devise to our User model. Run `bin/rails generate devise User` to install Devise to the User model. In a previous data model migration we added the email column. We need to comment that line out so we don't try to add it again. Open the generated migration and comment out the line `t.string :email`. Run `bin/rails db:migrate` to add the new columns.
+
+When we added the email, however, we did not have the same contraints that Devise added. Namely we were missing `null: false` (disallow nulls) and `default: ""` (default value to ""). We can add these back byrunningRun `bin/rails g migration AddConstraintsToEmail` and adding this to the migration:
+```ruby
+ class AddConstraintsToEmail < ActiveRecord::Migration[6.1]
+   def change
+     change_column_null :users, :email, false
+     change_column_default :users, :email, ''
+   end
+ end
+```
 
 Finally, we need to add `before_action :authenticate_user!` to the top of the ApplicationController class definition. This will ensure that all requests to the application will require authentication.
 

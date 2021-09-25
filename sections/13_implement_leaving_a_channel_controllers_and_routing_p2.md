@@ -132,3 +132,6 @@ Now let's try it out!
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/a209b0183211e49b3eb5beee22271612a2355331
+
+# Next Section
+- [Nested routes](14_nested_routes.md)

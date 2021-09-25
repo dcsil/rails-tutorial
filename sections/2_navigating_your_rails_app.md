@@ -50,3 +50,6 @@ One of these conventions has to do with the folder structure. Rails applications
 # Action Items
 
 There are no action items in this section other than reading the structure above and understanding it.
+
+# Next Section
+- [Project Introduction](3_project_introduction.md)

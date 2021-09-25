@@ -130,3 +130,6 @@ Try it out!
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/f1b086c43cc437e0bfd5cc9c5f08b6f623660b47
+
+# Next Section
+- [Action text and messages: Part 1](15_action_text_and_messages_p1.md)

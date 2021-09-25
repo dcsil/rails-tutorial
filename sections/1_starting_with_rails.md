@@ -47,3 +47,6 @@ This is failing due to OpenSSL. You can fix this by running `gem install mysql2 
 
 
 You may see other errors. Try `brew install mysql@5.7` and `brew link mysql@5.7` then try again.
+
+# Next Section
+- [Navigating your rails app](2_navigating_your_rails_app.md)

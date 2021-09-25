@@ -36,3 +36,6 @@ This document will outline the requirements for the project, and the following s
 
 These requirements were the first step in breaking down the project into smaller digestible pieces.
 Take a moment to read through these requirements. If you have any questions, please feel free to ask.
+
+# Next Section
+- [Data model: Part 1](4_data_model_p1.md)

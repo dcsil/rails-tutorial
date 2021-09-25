@@ -200,3 +200,6 @@ As an exercise, convert both the `Channel` and `User` forms to use the same appr
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/77dc2f4783b1b38c7791d227978e0a7ecc0ab1c8
+
+# Next Section
+- [Improve views](11_improve_views.md)

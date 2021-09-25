@@ -107,3 +107,6 @@ All of these are basically the same, changing out the variable and heading.
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/380b9ce7e4a1e06f0be2e2d2d7229adb8eda2ea4
+
+# Next Section
+- [Implement leaving a channel: Soft deletion](12_implement_leaving_a_channel_soft_deletion.md)

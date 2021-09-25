@@ -87,3 +87,6 @@ That's it for now, we will work to integrate the model soon!
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/705bf962012b0311ed6bf5e9d292d1a513e18057
+
+# Next Section
+- [Messages views: Part 2](16_messages_views_p2.md)

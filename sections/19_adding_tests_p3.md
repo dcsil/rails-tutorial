@@ -98,3 +98,6 @@ Tests should now pass for everything!
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/55531e954be32c9ba2701f920bb3ae8081ddd213
+
+# Next Section
+- [Adding tests: Part 4](20_adding_tests_p4.md)

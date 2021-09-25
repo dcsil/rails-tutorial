@@ -170,3 +170,6 @@ We will want to change `current_user.channels` to `current_user.active_channels`
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/22df515bce94c856fe485c0556429e2a160948ec
+
+# Next Section
+- [Implement leaving a channel: Controllers and routing](13_implement_leaving_a_channel_controllers_and_routing_p2.md)

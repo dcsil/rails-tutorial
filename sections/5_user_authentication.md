@@ -91,3 +91,6 @@ Back in the server tab, try to log in. This should let you through to the users 
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/96839eb0e205401a750cb856fdccf5e856dac1ff
+
+# Next Section
+- [Data model: Part 2](6_data_model_p2.md)

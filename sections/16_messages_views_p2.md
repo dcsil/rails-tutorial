@@ -411,3 +411,6 @@ Now submit a message and let it load!
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/e68e4579c7b291e18013b907d86f18f20be1a9c0
+
+# Next Section
+- [Adding tests: Part 1](17_adding_tests_p1.md)

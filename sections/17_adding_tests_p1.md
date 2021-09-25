@@ -258,3 +258,6 @@ Let's take a break at this point :)
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/69c6d1eb57e2cb2c748a5cdc3fe5582bdd0bd735
+
+# Next Section
+- [Adding tests: Part 2](18_adding_tests_p2.md)

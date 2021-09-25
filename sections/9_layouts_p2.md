@@ -118,3 +118,6 @@ Now when you view a channel you will be automatically added to the channel's mem
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/465a698563c82a6001fd9f3bc09717d46ced242b
+
+# Next Section
+- [Forms and Validations](10_forms_and_validations.md)

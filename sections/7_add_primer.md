@@ -173,3 +173,6 @@ We have now enabled Primer and can start using it!
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/4487da46996fe22d7750b52ffa396937418bc9b8
+
+# Next Section
+- [Layouts: Part 1](8_layouts_p1.md)

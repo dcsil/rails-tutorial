@@ -89,3 +89,6 @@ All Channels Controller tests should pass now!
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/02e6885462341c3afd0511e851590de5245e8540
+
+# Next Section
+- [Adding tests: Part 3](19_adding_tests_p3.md)

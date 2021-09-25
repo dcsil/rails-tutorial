@@ -49,3 +49,6 @@ Yarn is an alternative package manager for JavaScript. It is a bit like NPM. Rai
 1. Set it globally: Run `nodenv global 16.6.1`.
 1. We also need to install [Yarn](https://yarnpkg.com/en/docs/install). Run `npm install -g yarn`.
 1. Done!
+
+# Next Section
+- [Starting with Rails](1_starting_with_rails.md)

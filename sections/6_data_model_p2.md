@@ -23,12 +23,14 @@ You may notice that there's a special `user` column of type `references`. This i
 You should have a migration file called `db/migrate/TIMESTAMP_create_channels.rb`.
 
 ```ruby
-class CreateChannels < ActiveRecord::Migration
+class CreateChannels < ActiveRecord::Migration[6.1]
   def change
     create_table :channels do |t|
       t.string :name
       t.text :description
-      t.references :user, index: true, foreign_key: false # foreign_keys are optional. Foreign keys are not needed for this to work
+      t.references :user, null: false, foreign_key: true
+
+      t.timestamps
     end
   end
 end
@@ -110,3 +112,6 @@ These add a couple of associations:
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/1f9621cf79c5e06b3ce217f22b37889f3e6d0fd6
+
+# Next Section
+- [Add primer](7_add_primer.md)

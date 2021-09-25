@@ -66,3 +66,6 @@ When you reload, you should have something like this:
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/67cc3ec561e83b23e3df4b4cad448819392af83d
+
+# Next Section
+- [Layouts: Part 2](9_layouts_p2.md)

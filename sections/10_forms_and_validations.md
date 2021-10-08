@@ -68,6 +68,8 @@ Now if you try to add a duplicate channel name, it will fail.
 
 As an exercise, add additional validations you think are necessary to both Channel and User.
 
+Note 2: You cannot go to /users/new to create a user as Devise blocks this. Log out and register a new user instead.
+
 # Forms and Model Validations
 
 We now need to nicely show the model validations in the form.
@@ -169,7 +171,7 @@ As an exercise, convert both the `Channel` and `User` forms to use the same appr
     validates :name, length: { maximum: 80 }, presence: true, uniqueness: true
     validates :description, length: { maximum: 240 }
     ```
-7. Add appropriate validations to the `User` model.
+7. Add appropriate validations to the `User` model. NOTE: You cannot go to /users/new to create a user as Devise blocks this. Log out and register a new user instead.
 8. Update the User and Channel forms to show error messages by using the format:
     ```erb
     <div class="form-group <% if user.errors[:name].any? %>errored<% end %>">

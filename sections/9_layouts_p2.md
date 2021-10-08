@@ -28,7 +28,7 @@ Change the body content of the `app/views/layouts/application.html.erb` file to:
 
 Now the logged out user will not have any special layouts.
 
-## Adding the user's channel memberships to the sidebar
+## Adding the user's channel memberships to the sidebar (and a log out button)
 
 In the sidebar we want to show a list of the user's channel memberships. Let's leverage the `current_user` method to get the user, and ask for the channels association we added before.
 
@@ -39,6 +39,7 @@ The layout's body content should be something like:
  <% if user_signed_in? %>
   <div class="d-flex height-full">
     <nav class="col-2 pt-5 color-bg-canvas-inverse color-text-inverse menu" aria-label="Person settings">
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "menu-item" %>
       <% current_user.channels.each do |channel| %>
         <a class="menu-item color-text-inverse d-flex flex-justify-between" href="<%= channel_path(channel) %>">
           <span><%= channel.name %></span>

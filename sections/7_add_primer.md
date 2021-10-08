@@ -68,7 +68,7 @@ Open up `app/views/users/index.html.erb`. You should see a table in there:
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Preferred pronouns</th>
+      <th>pronouns</th>
       <th>Bio</th>
       <th colspan="3"></th>
     </tr>
@@ -79,7 +79,7 @@ Open up `app/views/users/index.html.erb`. You should see a table in there:
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.preferred_pronouns %></td>
+        <td><%= user.pronouns %></td>
         <td><%= user.bio %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
@@ -105,7 +105,7 @@ It should now look like this:
       <li class="Box-row">
         <div><%= user.name %></div>
         <div><%= user.email %></div>
-        <div><%= user.preferred_pronouns %></div>
+        <div><%= user.pronouns %></div>
         <div><%= user.bio %></div>
         <div><%= link_to 'Show', user %></div>
         <div><%= link_to 'Edit', edit_user_path(user) %></div>
@@ -140,7 +140,7 @@ We have now enabled Primer and can start using it!
           <li class="Box-row">
             <div><%= user.name %></div>
             <div><%= user.email %></div>
-            <div><%= user.preferred_pronouns %></div>
+            <div><%= user.pronouns %></div>
             <div><%= user.bio %></div>
             <div><%= link_to 'Show', user %></div>
             <div><%= link_to 'Edit', edit_user_path(user) %></div>

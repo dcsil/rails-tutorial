@@ -65,7 +65,7 @@ Next, we'll change the views.
     <% @users.each do |user| %>
       <li class="Box-row d-flex flex-justify-between">
         <div>
-          <h2><%= user.name %><% if user.preferred_pronouns.present? %> <small><%= user.preferred_pronouns %></small><% end %></h2>
+          <h2><%= user.name %><% if user.pronouns.present? %> <small><%= user.pronouns %></small><% end %></h2>
           <p><%= user.bio %></p>
         </div>
         <div class="d-flex flex-column">

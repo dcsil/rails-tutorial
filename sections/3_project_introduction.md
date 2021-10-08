@@ -23,7 +23,7 @@ This document will outline the requirements for the project, and the following s
   - [ ] See other users' messages
   - [ ] Format messages with markdown or a WYSIWYG editor, including images and emoji
 - Profile
-  - [ ] Create a profile page for the user that shows their name, email, preferred pronouns, and a profile picture (and other relevant information)
+  - [ ] Create a profile page for the user that shows their name, email, pronouns, and a profile picture (and other relevant information)
   - [ ] See other users' profile information
   - [ ] See other users' online status
   - [ ] See other users' last online time

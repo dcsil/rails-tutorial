@@ -13,7 +13,7 @@ create a table for (at least) each of the following:
 
 Let's start with the Users table as it is the most important table in our application and it appears that most, if not all, other tables will connect to it somehow.
 
-To generate the users table, we first need to know what columns we need to store. Considering the requirements, we know that we likely need: name, email, password*, preferred_pronouns, avatar*, bio, etc.
+To generate the users table, we first need to know what columns we need to store. Considering the requirements, we know that we likely need: name, email, password*, pronouns, avatar*, bio, etc.
 
 ## Most Attributes
 
@@ -49,7 +49,7 @@ Rails comes with database and database migration support built in. We can use th
 
 At this point, however, we also do not have any models, controllers, etc. In this case we can use a special command to generate a bunch of "scaffold code". This command will generate a model, controller, and views for us.
 
-`bin/rails generate scaffold User name:string email:string preferred_pronouns:string bio:text`
+`bin/rails generate scaffold User name:string email:string pronouns:string bio:text`
 
 This will generate the following files:
 - `app/models/user.rb`
@@ -67,7 +67,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
     create_table :users do |t|
       t.string :name
       t.string :email
-      t.string :preferred_pronouns
+      t.string :pronouns
       t.text :bio
       t.timestamps
     end
@@ -85,7 +85,7 @@ Finally, let's start the rails server again with `bin/rails s` and navigate to h
 
 # Action Items
 
-1. Run `bin/rails generate scaffold User name:string email:string preferred_pronouns:string bio:text`
+1. Run `bin/rails generate scaffold User name:string email:string pronouns:string bio:text`
 2. Run `bin/rails db:migrate`
 3. Run `bin/rails s`
 4. Navigate to http://localhost:3000/users

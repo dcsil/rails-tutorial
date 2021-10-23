@@ -112,3 +112,6 @@ These add a couple of associations:
 # This section in the example app
 
 https://github.com/dcsil/rails-tutorial-example/commit/1f9621cf79c5e06b3ce217f22b37889f3e6d0fd6
+
+# Next Section
+- [Add Primer](sections/7_add_primer.md)
